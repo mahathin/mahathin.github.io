@@ -413,3 +413,114 @@ footer {
     padding: 8px 10px;
   }
 }
+
+
+/* ═══════════════════════════════════════════════════
+   WILDLIFE WORK PAGE
+═══════════════════════════════════════════════════ */
+
+/* Citizen science numbered list */
+.citizen-science-list {
+  padding-left: 24px;
+  margin-bottom: 28px;
+}
+
+.citizen-science-list li {
+  margin-bottom: 14px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Reusable external link highlight card */
+.wildlife-link-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #f9fff9;
+  margin: 16px 0 28px;
+  max-width: 600px;
+}
+
+.wildlife-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  line-height: 1.4;
+}
+
+.wildlife-link-card div {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.wildlife-link-card strong {
+  display: block;
+  color: #2a2a2a;
+  margin-bottom: 4px;
+}
+
+/* Small italic note */
+.small-note {
+  font-size: 15px;
+  color: #777;
+  margin-top: -8px;
+  margin-bottom: 16px;
+}
+
+/* ── iNaturalist Widget Wrapper ─────────────────── */
+.inat-widget-wrap {
+  border: 1px solid #d0e8d0;
+  border-radius: 10px;
+  padding: 20px 24px;
+  background: #f4fff4;
+  margin: 20px 0 32px;
+  overflow-x: auto;
+}
+
+.inat-widget-header {
+  margin-bottom: 14px;
+}
+
+.inat-widget-header img {
+  height: 36px;
+  width: auto;
+}
+
+.inat-widget-footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #d0e8d0;
+}
+
+.inat-user-thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #4cfcde;
+  object-fit: cover;
+}
+
+.inat-widget-footer a {
+  font-size: 16px;
+}
+
+/* ── RESPONSIVE ─────────────────────────────────── */
+@media (max-width: 600px) {
+  .wildlife-link-card {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .inat-widget-wrap {
+    padding: 14px 12px;
+  }
+
+  .citizen-science-list li {
+    font-size: 16px;
+  }
+}
