@@ -1,4 +1,161 @@
 /* My work specific styles
+
+/* ═══════════════════════════════════════════════════
+   HERO BANNER
+   Matches original Weebly gradient: #4cfcde → #e7ffe0
+═══════════════════════════════════════════════════ */
+.hero {
+  background: linear-gradient(180deg, #4cfcde 0%, #e7ffe0 100%);
+  padding: 72px 24px;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.hero-inner p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #2a2a2a;
+  margin-bottom: 16px;
+}
+
+.hero-inner strong {
+  font-size: 26px;
+  color: #2a2a2a;
+}
+
+.hero-inner em {
+  font-size: 18px;
+  color: #2a2a2a;
+}
+
+/* ═══════════════════════════════════════════════════
+   HERO BUTTONS
+═══════════════════════════════════════════════════ */
+.hero-buttons {
+  margin-top: 28px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #196ced;
+  color: #fff !important;
+  border-radius: 6px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #ec3207;
+  color: #fff !important;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #196ced;
+  color: #196ced !important;
+}
+
+.btn-outline:hover {
+  background: #ec3207;
+  border-color: #ec3207;
+  color: #fff !important;
+}
+
+/* ═══════════════════════════════════════════════════
+   QUICK LINKS / CARDS GRID
+═══════════════════════════════════════════════════ */
+.quick-links {
+  padding: 56px 0;
+}
+
+.quick-links h2 {
+  margin-bottom: 36px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  display: block;
+  padding: 28px 24px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #3f3f3f;
+  background: #fff;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  text-align: center;
+}
+
+.card:hover {
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
+  border-color: #196ced;
+  color: #3f3f3f;
+}
+
+.card-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-family: 'Rokkitt', Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE — CARDS
+═══════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 48px 20px;
+  }
+
+  .hero-inner strong {
+    font-size: 22px;
+  }
+
+  .hero-inner em {
+    font-size: 16px;
+  }
+}
+
 /* ═══════════════════════════════════════════════════
    GLOBAL RESET & BASE
 ═══════════════════════════════════════════════════ */
