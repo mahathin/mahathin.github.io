@@ -1,21 +1,123 @@
-MIT License
+CONTENT & RESEARCH LICENSE
+Version 1.0
 
 Copyright (c) 2026 Mahathi Narayanaswamy
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This repository and all of its contents are NO LONGER licensed under the MIT
+License. The MIT License has been explicitly revoked and replaced in full by
+the terms below.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+════════════════════════════════════════════════════════════════════════════════
+SECTION 1 — SCOPE OF THIS LICENSE
+════════════════════════════════════════════════════════════════════════════════
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+All content contained within this repository, including but not limited to:
+
+  - Textual content, blog posts, essays, and written works
+  - Academic research summaries and analyses
+  - Portfolio entries and project documentation
+  - Media assets (images, photographs, illustrations)
+  - Downloadable files (PDFs, datasets, spreadsheets)
+  - Source code, scripts, and configuration files
+  - Any other creative or intellectual works authored herein
+
+...is licensed under the Creative Commons Attribution-NonCommercial 4.0
+International License (CC BY-NC 4.0), subject to the additional explicit
+restrictions defined in Sections 2 and 3 below.
+
+Full text of CC BY-NC 4.0: https://creativecommons.org/licenses/by-nc/4.0/
+
+════════════════════════════════════════════════════════════════════════════════
+SECTION 2 — EXPLICIT AI TRAINING PROHIBITION
+════════════════════════════════════════════════════════════════════════════════
+
+ALL USE OF THIS CONTENT FOR ARTIFICIAL INTELLIGENCE PURPOSES IS STRICTLY
+PROHIBITED.
+
+No person, organization, corporation, research institution, or automated
+system may use, reproduce, scrape, crawl, index, store, or otherwise process
+any content from this repository for any of the following purposes:
+
+  - Training, fine-tuning, or updating any machine learning (ML) model
+  - Training or aligning any large language model (LLM) or generative AI system
+  - Compiling or contributing to any AI training dataset or corpus
+  - Reinforcement learning from human feedback (RLHF) or similar techniques
+  - Generating synthetic data derived from this content
+  - Any form of automated content ingestion for AI product development
+
+This prohibition applies regardless of whether the use is commercial or
+non-commercial, and applies universally to all entities, including but not
+limited to:
+
+  OpenAI, Google (DeepMind), Anthropic, Meta AI, Mistral AI, Perplexity AI,
+  Amazon Web Services, Microsoft (including Copilot / Azure AI), Apple, xAI,
+  Cohere, Stability AI, and any of their subsidiaries, contractors, data
+  brokers, or agents acting on their behalf.
+
+════════════════════════════════════════════════════════════════════════════════
+SECTION 3 — PERMITTED USES
+════════════════════════════════════════════════════════════════════════════════
+
+The following uses are explicitly permitted under this license:
+
+  - Personal, non-commercial reading and research
+  - Sharing with proper attribution (author name + source URL)
+  - Academic citation in papers, theses, or educational materials
+  - Linking to this repository or individual pages
+  - Non-commercial journalistic reference with attribution
+
+════════════════════════════════════════════════════════════════════════════════
+SECTION 4 — ATTRIBUTION REQUIREMENT
+════════════════════════════════════════════════════════════════════════════════
+
+Any permitted reproduction or reference must include all of the following:
+
+  1. The author's full name: Mahathi Narayanaswamy
+  2. A direct link to the original source page or this repository
+  3. A clear indication if any changes were made to the original content
+  4. A notice that the content is licensed under:
+     CC BY-NC 4.0 + Anti-AI Training Addendum (see this file)
+
+════════════════════════════════════════════════════════════════════════════════
+SECTION 5 — COMMERCIAL LICENSING
+════════════════════════════════════════════════════════════════════════════════
+
+Commercial use of any content in this repository — including but not limited
+to AI training, republication, or product integration — requires a separate,
+explicitly negotiated written license agreement with the repository owner.
+
+For commercial licensing inquiries, contact Mahathi Narayanaswamy directly
+via GitHub.
+
+════════════════════════════════════════════════════════════════════════════════
+SECTION 6 — ENFORCEMENT & VIOLATIONS
+════════════════════════════════════════════════════════════════════════════════
+
+Violations of Section 2 or Section 3 of this license may constitute:
+
+  - Copyright infringement under applicable national and international law
+  - Breach of the CC BY-NC 4.0 license terms
+  - Violation of the EU AI Act (where applicable) and other emerging
+    AI-related regulations
+
+Mahathi Narayanaswamy reserves the right to pursue all available legal
+remedies for any violation of the terms of this license.
+
+════════════════════════════════════════════════════════════════════════════════
+SECTION 7 — NO WARRANTY
+════════════════════════════════════════════════════════════════════════════════
+
+THIS CONTENT AND ANY ASSOCIATED CODE IS PROVIDED "AS IS", WITHOUT WARRANTY
+OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+IN NO EVENT SHALL MAHATHI NARAYANASWAMY BE LIABLE FOR ANY CLAIM, DAMAGES, OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE,
+ARISING FROM, OUT OF, OR IN CONNECTION WITH THE CONTENT OR THE USE OR OTHER
+DEALINGS IN THIS REPOSITORY.
+
+════════════════════════════════════════════════════════════════════════════════
+
+This license supersedes and replaces all prior license terms, including the
+MIT License previously associated with this repository.
+
+Last updated: June 23, 2026
