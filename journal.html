@@ -1,1 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta property="og:site_name" content="Mahathi Narayanaswamy" />
+  <meta property="og:title" content="Journal" />
+  <meta property="og:description" content="Writing, reflections and journal
+    entries by Mahathi Narayanaswamy. Subscribe on Substack." />
+  <meta property="og:url" content="https://mahathin.github.io/journal.html" />
+  <title>Journal - Mahathi Narayanaswamy</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
 
+<body>
+
+  <!-- ═══════════════════════════════════════ HEADER / NAV -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <a href="index.html">Mahathi Narayanaswamy</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="my-work.html">My Work</a></li>
+          <li><a href="wildlife-work.html">Wildlife Work</a></li>
+          <li><a href="other-interests.html">Other Interests</a></li>
+          <li><a href="journal.html" class="active">Journal</a></li>
+          <li><a href="about-me.html">About Me</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════ MAIN CONTENT -->
+  <main>
+    <div class="container">
+
+      <!-- ── PAGE INTRO ─────────────────────────────────── -->
+      <section id="journal-intro">
+        <h2>Journal</h2>
+        <p class="journal-intro-text">
+          This is where I write. You'll find reflections, observations from
+          nature, thoughts on science, and whatever else I feel like putting
+          into words. I publish on Substack — subscribe there to get new posts
+          delivered straight to your inbox.
+        </p>
+
+        <!-- Substack subscribe banner -->
+        <div class="substack-banner">
+          <div class="substack-banner-text">
+            <span class="substack-icon">✉️</span>
+            <div>
+              <strong>Subscribe on Substack</strong>
+              <p>Get new posts delivered to your inbox. Free, no spam.</p>
+            </div>
+          </div>
+          <a href="https://nmahathi.substack.com?utm_source=mahathin.github.io"
+             target="_blank" rel="noopener" class="btn btn-substack">
+            Subscribe →
+          </a>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- ── LATEST POSTS (auto-loaded from Substack RSS) ── -->
+      <section id="latest-posts">
+        <h3 class="posts-heading">Latest Posts</h3>
+
+        <!-- Loading state -->
+        <div id="posts-loading" class="posts-loading">
+          <span class="loading-spinner"></span>
+          Loading latest posts from Substack...
+        </div>
+
+        <!-- Error state -->
+        <div id="posts-error" class="posts-error" style="display:none;">
+          <p>
+            Could not load posts right now.
+            <a href="https://nmahathi.substack.com"
+               target="_blank" rel="noopener">
+              Read directly on Substack →
+            </a>
+          </p>
+        </div>
+
+        <!-- Posts grid — filled by JS -->
+        <div id="posts-grid" class="posts-grid" style="display:none;"></div>
+
+        <!-- View all button -->
+        <div id="view-all-wrap" class="view-all-wrap" style="display:none;">
+          <a href="https://nmahathi.substack.com"
+             target="_blank" rel="noopener"
+             class="btn btn-outline">
+            View All Posts on Substack →
+          </a>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- ── ABOUT THE JOURNAL ──────────────────────────── -->
+      <section id="about-journal">
+        <h3>About This Journal</h3>
+        <p>
+          I write about things that catch my attention — mostly nature, science,
+          and the world around me. Some posts are long reflections, some are
+          short observations. There's no fixed schedule, just whenever something
+          feels worth writing about.
+        </p>
+        <p>
+          All writing on this journal is my own and is licensed under
+          <a href="LICENSE">CC BY-NC 4.0 with Anti-AI Training restrictions</a>.
+          Please do not use my writing to train AI models.
+        </p>
+
+        <div class="wildlife-link-card">
+          <span class="wildlife-icon">📖</span>
+          <div>
+            <strong>Read the full archive on Substack</strong><br />
+            <a href="https://nmahathi.substack.com"
+               target="_blank" rel="noopener">
+              nmahathi.substack.com →
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- end .container -->
+  </main>
+
+  <!-- ═══════════════════════════════════════ FOOTER -->
+  <footer>
+    <div class="container">
+      <p>
+        © 2026 Mahathi Narayanaswamy. All content licensed under CC BY-NC 4.0.
+        AI training use is strictly prohibited.
+        See <a href="LICENSE">LICENSE</a>.
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+
+  <!-- ═══════════════════════════════════════ RSS FEED SCRIPT -->
+  <script>
+    (function () {
+
+      // ── CONFIG ───────────────────────────────────────────
+      const SUBSTACK_URL  = 'https://nmahathi.substack.com';
+      const RSS_FEED_URL  = SUBSTACK_URL + '/feed';
+      // rss2json converts the RSS XML to clean JSON for free
+      const API_URL = 'https://api.rss2json.com/v1/api.json'
+                    + '?rss_url=' + encodeURIComponent(RSS_FEED_URL)
+                    + '&api_key=&count=6';  // shows 6 latest posts
+
+      // ── ELEMENTS ─────────────────────────────────────────
+      const loading  = document.getElementById('posts-loading');
+      const error    = document.getElementById('posts-error');
+      const grid     = document.getElementById('posts-grid');
+      const viewAll  = document.getElementById('view-all-wrap');
+
+      // ── HELPERS ──────────────────────────────────────────
+
+      // Format a date string nicely e.g. "12 June 2025"
+      function formatDate(dateStr) {
+        const d = new Date(dateStr);
+        return d.toLocaleDateString('en-GB', {
+          day:   'numeric',
+          month: 'long',
+          year:  'numeric'
+        });
+      }
+
+      // Strip HTML tags to get plain text for excerpt
+      function stripHTML(html) {
+        const tmp = document.createElement('div');
+        tmp.innerHTML = html;
+        return tmp.textContent || tmp.innerText || '';
+      }
+
+      // Trim text to a max word count
+      function trimExcerpt(text, maxWords) {
+        const words = text.trim().split(/\s+/);
+        if (words.length <= maxWords) return text.trim();
+        return words.slice(0, maxWords).join(' ') + '…';
+      }
+
+      // Build one post card element
+      function buildPostCard(post) {
+        const card       = document.createElement('article');
+        card.className   = 'post-card';
+
+        const title      = post.title    || 'Untitled';
+        const link       = post.link     || SUBSTACK_URL;
+        const dateStr    = post.pubDate  ? formatDate(post.pubDate) : '';
+        const rawText    = stripHTML(post.content || post.description || '');
+        const excerpt    = trimExcerpt(rawText, 30);
+        const thumbnail  = post.thumbnail || null;
+        const categories = post.categories || [];
+
+        // Optional thumbnail
+        const imgHTML = thumbnail
+          ? `<div class="post-card-img">
+               <img src="${thumbnail}" alt="${title}" loading="lazy" />
+             </div>`
+          : `<div class="post-card-img post-card-img-placeholder">
+               <span>✍️</span>
+             </div>`;
+
+        // Optional category tags
+        const tagsHTML = categories.length
+          ? `<div class="post-tags">
+               ${categories.slice(0, 3).map(
+                 c => `<span class="post-tag">${c}</span>`
+               ).join('')}
+             </div>`
+          : '';
+
+        card.innerHTML = `
+          ${imgHTML}
+          <div class="post-card-body">
+            ${tagsHTML}
+            <h4 class="post-card-title">
+              <a href="${link}" target="_blank" rel="noopener">${title}</a>
+            </h4>
+            ${dateStr ? `<p class="post-card-date">${dateStr}</p>` : ''}
+            <p class="post-card-excerpt">${excerpt}</p>
+            <a href="${link}" target="_blank" rel="noopener"
+               class="post-read-more">Read on Substack →</a>
+          </div>
+        `;
+        return card;
+      }
+
+      // ── FETCH ────────────────────────────────────────────
+      fetch(API_URL)
+        .then(function (res) {
+          if (!res.ok) throw new Error('Network error');
+          return res.json();
+        })
+        .then(function (data) {
+          loading.style.display = 'none';
+
+          // rss2json returns status "ok" on success
+          if (data.status !== 'ok' || !data.items || data.items.length === 0) {
+            error.style.display = 'block';
+            return;
+          }
+
+          // Build and append cards
+          data.items.forEach(function (post) {
+            grid.appendChild(buildPostCard(post));
+          });
+
+          grid.style.display    = 'grid';
+          viewAll.style.display = 'block';
+        })
+        .catch(function () {
+          loading.style.display = 'none';
+          error.style.display   = 'block';
+        });
+
+    })();
+  </script>
+
+</body>
+</html>
